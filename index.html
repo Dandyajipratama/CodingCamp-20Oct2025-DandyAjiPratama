@@ -3,16 +3,305 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>DTechHouse</title>
 
         <link rel="stylesheet" href="css/style.css" />
+
+        <!--  -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body>
-        <header></header>
+        <!-- nav -->
+        <header class="bg-gray-900 text-white sticky top-0 left-0 right-0 z-50">
+            <div class="px-8 md:px-12 lg:px-16">
+                <div class="flex h-16 items-center justify-between">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center gap-2">
+                        <img src="assets/img/logo_d.jpg" alt="Logo" class="w-10 h-10 rounded-2xl object-cover" />
+                        <span class="font-semibold text-lg">DTechHouse</span>
+                    </a>
 
-        <main></main>
+                    <!-- Hamburger button (mobile) -->
+                    <button id="menu-btn" class="block md:hidden p-2 rounded hover:bg-gray-800 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
 
-        <footer></footer>
+                    <!-- Desktop Menu -->
+                    <nav id="menu" class="hidden md:flex space-x-8 text-sm font-medium">
+                        <a href="#" class="hover:text-sky-200 transition">Home</a>
+                        <a href="#profil" class="hover:text-sky-200 transition">Profil</a>
+                        <a href="#porto" class="hover:text-sky-200 transition">Portofolio</a>
+                        <a href="#visi-misi" class="hover:text-sky-200 transition">Visi & Misi</a>
+                        <a href="#messageUs" class="hover:text-sky-200 transition">Message Us</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="hidden md:hidden flex-col items-center bg-gray-900 text-white w-full text-sm font-medium border-t border-gray-800">
+                <a href="#" class="block py-3 w-full text-center hover:bg-gray-800 transition">Home</a>
+                <a href="#profil" class="block py-3 w-full text-center hover:bg-gray-800 transition">Profil</a>
+                <a href="#porto" class="block py-3 w-full text-center hover:bg-gray-800 transition">Portofolio</a>
+                <a href="#visi-misi" class="block py-3 w-full text-center hover:bg-gray-800 transition">Visi & Misi</a>
+                <a href="#messageUs" class="block py-3 w-full text-center hover:bg-gray-800 transition">Message Us</a>
+            </nav>
+        </header>
+
+        <!-- welcome -->
+        <div class="border-b border-gray-200 bg-gray-100 py-2 text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-white">
+            <p class="px-8 md:px-12 lg:px-16 text-start font-medium">Hi <span id="welcomeName">Name</span>, welcome to DTechHouse!</p>
+        </div>
+
+        <!-- banner -->
+        <section class="overflow-hidden bg-[url(assets/img/banner.jpg)] bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center">
+            <div class="bg-black/50 w-full p-8 md:p-12 lg:px-16 lg:py-24 min-h-[600px] flex items-center">
+                <div class="text-center ltr:sm:text-left rtl:sm:text-right">
+                    <h2 class="text-2xl font-bold text-white sm:text-3xl md:text-5xl">Innovating the Future with Technology</h2>
+
+                    <p class="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">House of AI, Software and IoT.</p>
+
+                    <div class="mt-4 sm:mt-8">
+                        <a href="#about" class="inline-block rounded-full bg-sky-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-sky-700 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"> Explore Our Solutions </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about company -->
+        <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center" id="profil">
+            <img alt="" src="https://images.unsplash.com/photo-1676275773812-637590f8e7c7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1276" class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-se-[30px] md:h-[calc(100%_-_4rem)] md:rounded-se-[60px]" />
+            <div class="p-8 md:p-12 lg:px-36 lg:py-24">
+                <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+                    <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">Tentang DTechHouse</h2>
+
+                    <p class="text-gray-500 md:mt-4 md:block">
+                        DTechHouse berdiri sebagai mitra teknologi terpercaya bagi perusahaan yang ingin berkembang di era digital. Kami menghadirkan solusi inovatif dalam pembuatan perangkat lunak, pengembangan kecerdasan buatan, serta implementasi sistem Internet of Things yang terintegrasi.
+                        <br /><br />
+                        Dengan tim profesional dan berpengalaman, kami berkomitmen untuk menciptakan teknologi yang tidak hanya efisien, tetapi juga berdampak positif bagi masyarakat dan dunia bisnis.
+                    </p>
+
+                    <div class="mt-4 md:mt-8">
+                        <a href="#" class="inline-block rounded-3xl bg-sky-600 px-12 py-3 text-sm font-medium text-white transition hover:scale-105 duration-300 hover:shadow-lg focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"> Mulai Hari Ini </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- visi misi -->
+        <section id="visi-misi" class="relative bg-gradient-to-br from-gray-100 via-sky-100 to-gray-200 py-14 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/snow.png')] opacity-10"></div>
+
+            <div class="relative mx-auto max-w-6xl px-6 lg:px-8 text-center">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 tracking-tight"><span class="text-sky-600">Visi</span> & Misi Kami</h2>
+                    <p class="mt-3 text-gray-600 max-w-2xl mx-auto text-base">Membangun masa depan digital melalui inovasi di bidang AI, Software, dan IoT.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="backdrop-blur-md bg-white/70 border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-lg hover:bg-white/90 transition duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Visi</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Menjadi pemimpin dalam inovasi teknologi yang menghubungkan manusia, data, dan sistem ke dalam satu ekosistem cerdas dan berkelanjutan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="backdrop-blur-md bg-white/70 border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-lg hover:bg-white/90 transition duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13h2l2-4 3 6 2-4 3 6 2-4h3" />
+                                </svg>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-1">Misi</h3>
+                                <ul class="text-gray-600 text-sm space-y-1 leading-relaxed">
+                                    <li>• Mengembangkan solusi AI dan IoT yang berorientasi pada kebutuhan nyata.</li>
+                                    <li>• Menciptakan perangkat lunak efisien, modern, dan mudah diakses.</li>
+                                    <li>• Mendukung percepatan transformasi digital lintas industri.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- porto -->
+        <div class="" id="porto">
+            <div class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4 text-center">Portofolio Kami</h2>
+                <p class="text-gray-600 text-center mb-12">Beberapa hasil karya dan solusi digital DandyTech yang telah membantu klien berinovasi dan tumbuh di era teknologi modern.</p>
+
+                <div class="grid grid-cols-1 mt-9 gap-8 md:grid-cols-3">
+                    <a href="#" class="block hover:scale-105 duration-300">
+                        <img alt="Project 1" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72" />
+
+                        <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
+                            <strong class="font-medium">PT. Astra</strong>
+
+                            <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
+
+                            <p class="mt-0.5 opacity-50 sm:mt-0">Mobile Apps</p>
+                        </div>
+                        <br />
+                        <p class="opacity-50 sm:mt-0">Pengembangan aplikasi kustom untuk membantu perusahaan beradaptasi dengan kebutuhan digital masa kini.</p>
+                    </a>
+
+                    <a href="#" class="block hover:scale-105 duration-300">
+                        <img alt="Project 2" src="https://plus.unsplash.com/premium_photo-1661963406479-7edd1a104fb1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72" />
+
+                        <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
+                            <strong class="font-medium">Alibaba Warehouse</strong>
+
+                            <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
+
+                            <p class="mt-0.5 opacity-50 sm:mt-0">IoT</p>
+                        </div>
+                        <br />
+                        <p class="opacity-50 sm:mt-0">Sistem IoT yang menghubungkan perangkat industri secara real-time untuk efisiensi dan keamanan data.</p>
+                    </a>
+
+                    <a href="#" class="block hover:scale-105 duration-300">
+                        <img alt="Project 3" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115" class="h-56 w-full rounded-tr-3xl rounded-bl-3xl object-cover sm:h-64 lg:h-72" />
+
+                        <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
+                            <strong class="font-medium">PT. Cherry</strong>
+
+                            <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
+
+                            <p class="mt-0.5 opacity-50 sm:mt-0">Website App</p>
+                        </div>
+                        <br />
+                        <p class="opacity-50 sm:mt-0">Pengembangan website kustom untuk membantu perusahaan dalam pengelolaan data perusahaan.</p>
+                    </a>
+                </div>
+                <div class="mt-12 text-center">
+                    <button class="rounded-3xl bg-sky-600 p-3 text-white hover:scale-105 duration-300 hover:shadow-lg text-sm font-medium px-12 py-3">Lihat Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Us -->
+        <section id="messageUs" class="bg-gray-50 py-16">
+            <div class="max-w-screen-lg mx-auto px-6">
+                <!-- Title -->
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">Message Us</h2>
+                    <p class="text-gray-500 mt-2 text-sm sm:text-base">Kirim pesan atau pertanyaan Anda. Kami akan segera merespons.</p>
+                </div>
+
+                <!-- Form Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white p-8 rounded-lg shadow-md">
+                    <!-- Form Input -->
+                    <div class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+                            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" class="h-11 w-full rounded border border-gray-300 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" required />
+                        </div>
+
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
+                            <input type="date" id="date" name="date" class="h-11 w-full rounded border border-gray-300 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
+                        </div>
+
+                        <div>
+                            <span class="block text-sm font-medium text-gray-700 mb-1">Jenis Kelamin</span>
+                            <div class="flex items-center gap-6">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="Laki-laki" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300" required />
+                                    <span class="ml-2 text-gray-700 text-sm">Laki-laki</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="Perempuan" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300" />
+                                    <span class="ml-2 text-gray-700 text-sm">Perempuan</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" name="message" rows="3" class="w-full resize-none rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300 text-sm" placeholder="Tulis pesan Anda..."></textarea>
+                        </div>
+
+                        <button type="submit" id="sendButton" class="w-full rounded-xl bg-sky-600 px-6 py-3 text-sm font-medium text-white hover:bg-sky-500 transition hover:shadow-lg">Submit</button>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div class="space-y-4 text-gray-700">
+                        <h3 class="text-lg font-semibold text-sky-600">Data Terkirim</h3>
+                        <div class="border-t border-gray-200 pt-2 text-sm space-y-2">
+                            <p>Jam Saat Ini: <span id="emailTime" class="font-medium text-gray-900"></span></p>
+                            <p>Nama: <span id="emailName" class="font-medium text-gray-900"></span></p>
+                            <p>Tanggal Lahir: <span id="emailBirth" class="font-medium text-gray-900"></span></p>
+                            <p>Jenis Kelamin: <span id="emailGender" class="font-medium text-gray-900"></span></p>
+                            <p>Pesan: <span id="emailMessage" class="font-medium text-gray-900"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="bg-gray-100 dark:bg-gray-900">
+            <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+                <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+                    <a class="inline-block rounded-full bg-teal-600 p-2 text-white shadow-sm transition hover:bg-teal-500 sm:p-3 lg:p-4 dark:bg-gray-700 dark:text-teal-300 dark:hover:bg-gray-600" href="#">
+                        <span class="sr-only">Back to top</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="lg:flex lg:items-end lg:justify-between">
+                    <div>
+                        <div class="flex justify-center text-white lg:justify-start dark:text-white">
+                            <a href="#" class="flex items-center gap-2">
+                                <img src="assets/img/logo_d.jpg" alt="Logo" class="w-10 h-10 rounded-2xl object-cover" />
+                                <span class="font-semibold text-lg">DTechHouse</span>
+                            </a>
+                        </div>
+
+                        <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left dark:text-gray-400">House of AI, Software and IoT.</p>
+                    </div>
+
+                    <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#profil" class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">Profil</a>
+                        </li>
+
+                        <li>
+                            <a href="#porto" class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">Portofolio</a>
+                        </li>
+
+                        <li>
+                            <a href="#visi-misi" class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">Visi & Misi</a>
+                        </li>
+
+                        <li>
+                            <a href="#messageUs" class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">Message Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400">Copyright &copy; 2025. All rights reserved.</p>
+            </div>
+        </footer>
+
         <script src="js/script.js"></script>
     </body>
 </html>
